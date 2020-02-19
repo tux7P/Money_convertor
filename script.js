@@ -6,7 +6,10 @@ const rateElement = document.getElementById('rate');
 const swapButton = document.getElementById('swap');
 
 function calculate () {
- console.log('My event listeners are working!!!!')
+    const currency_one = currencyOneElement.value;
+    const currency_two = currencyTwoElement.value;
+
+    console.log(currency_one, currency_two)
 }
 
 calculate();
