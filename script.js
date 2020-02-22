@@ -12,7 +12,9 @@ function calculate () {
     fetch(`https://api.exchangerate-api.com/v4/latest/${currency_one}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            const rate = data.rates[currency_two];
+            console.log(rate);
+            amountTwoElement.value = amountOneElement.value * rate;
         });
 }
 
