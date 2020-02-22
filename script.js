@@ -13,7 +13,7 @@ function calculate () {
         .then(res => res.json())
         .then(data => {
             const rate = data.rates[currency_two];
-            console.log(rate);
+            rateElement.innerText = `1 ${currency_one} = ${rate}`;
             amountTwoElement.value = amountOneElement.value * rate;
         });
 }
