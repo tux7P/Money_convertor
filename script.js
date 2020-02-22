@@ -9,7 +9,11 @@ function calculate () {
     const currency_one = currencyOneElement.value;
     const currency_two = currencyTwoElement.value;
 
-    console.log(currency_one, currency_two)
+    fetch(`https://api.exchangerate-api.com/v4/latest/${currency_one}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        });
 }
 
 calculate();
