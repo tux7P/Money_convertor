@@ -18,9 +18,18 @@ function calculate () {
         });
 }
 
-calculate();
+function swap() {
+    const temp = currencyOneElement.value;
+    currencyOneElement.value = currencyTwoElement.value;
+    currencyTwoElement.value = temp;
+    calculate()
+}
+
+//calculate();
 
 currencyOneElement.addEventListener('change', calculate);
 amountOneElement.addEventListener('input', calculate);
 currencyTwoElement.addEventListener('change', calculate);
 amountTwoElement.addEventListener('input', calculate);
+swapButton.addEventListener('click', swap);
+
