@@ -25,8 +25,6 @@ function swap() {
     calculate()
 }
 
-//calculate();
-
 currencyOneElement.addEventListener('change', calculate);
 amountOneElement.addEventListener('input', calculate);
 currencyTwoElement.addEventListener('change', calculate);
